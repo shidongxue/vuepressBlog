@@ -103,7 +103,7 @@ module.exports = {
         ]
       },
     ],
-    sidebarDepth: 2, // 侧边栏显示2级
-    displayAllHeaders: true,
+    sidebarDepth: 0, // 侧边栏显示2级
+    // displayAllHeaders: true,
   }
 };
