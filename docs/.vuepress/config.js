@@ -37,20 +37,6 @@ module.exports = {
             { title: 'items01', path:'/js/ECMA/作用域'},
           ]
       }],
-      '/NodeJs/': [{
-          title: 'NodeJs',
-          collapsable: false, 
-          children: [
-            { title: 'items01', path:'/NodeJs/'},
-          ]
-      }],
-       '/Vue/': [{
-          title: 'Vue知识点',
-          collapsable: false, 
-          children: [
-            { title: 'items01', path:'/Vue/'},
-          ]
-      }],
     },
     sidebarDepth: 2, // 侧边栏显示2级
     displayAllHeaders: true,
