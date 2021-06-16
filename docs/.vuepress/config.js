@@ -79,6 +79,7 @@ module.exports = {
               { title: '扩展运算符', path:'/js/ES6/扩展运算符'},
               { title: '原型与原型链', path:'/js/ES6/数组方法'},
               { title: '结构赋值', path:'/js/ES6/结构赋值'},
+              { title: 'Promise', path:'/js/ES6/Promise'},
             ]
           }
         ]
@@ -88,7 +89,8 @@ module.exports = {
         title: 'NodeJs',
         collapsable: true,
         children: [
-          {title:'NodeJs基本知识',path: '/NodeJs/NodeJs基本知识'}
+          {title:'NodeJs基本知识',path: '/NodeJs/NodeJs基本知识'},
+          {title:'Express框架',path: '/NodeJs/Express'}
         ]
       },
       // Vue

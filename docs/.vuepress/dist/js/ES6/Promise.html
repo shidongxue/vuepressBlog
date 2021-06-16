@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>异步API | 前端小白</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/logo.jpg">
+    <meta name="description" content="个人网站">
+    
+    <link rel="preload" href="/assets/css/0.styles.abc9894d.css" as="style"><link rel="preload" href="/assets/js/app.800d2022.js" as="script"><link rel="preload" href="/assets/js/2.86f4cd79.js" as="script"><link rel="preload" href="/assets/js/23.58f91fbb.js" as="script"><link rel="prefetch" href="/assets/js/10.d746d5b6.js"><link rel="prefetch" href="/assets/js/11.78caa398.js"><link rel="prefetch" href="/assets/js/12.dae9c770.js"><link rel="prefetch" href="/assets/js/13.b2d08f06.js"><link rel="prefetch" href="/assets/js/14.d8f973c5.js"><link rel="prefetch" href="/assets/js/15.7e0b8fd7.js"><link rel="prefetch" href="/assets/js/16.965ed012.js"><link rel="prefetch" href="/assets/js/17.2daba412.js"><link rel="prefetch" href="/assets/js/18.e351df23.js"><link rel="prefetch" href="/assets/js/19.a4286147.js"><link rel="prefetch" href="/assets/js/20.dfcdd779.js"><link rel="prefetch" href="/assets/js/21.a118c9a0.js"><link rel="prefetch" href="/assets/js/22.921822bb.js"><link rel="prefetch" href="/assets/js/24.d5e85b63.js"><link rel="prefetch" href="/assets/js/25.9086eab3.js"><link rel="prefetch" href="/assets/js/26.7a0a358d.js"><link rel="prefetch" href="/assets/js/3.94966178.js"><link rel="prefetch" href="/assets/js/4.3b9e220c.js"><link rel="prefetch" href="/assets/js/5.ab31c756.js"><link rel="prefetch" href="/assets/js/6.3b330e45.js"><link rel="prefetch" href="/assets/js/7.42faf49d.js"><link rel="prefetch" href="/assets/js/8.4ab74480.js"><link rel="prefetch" href="/assets/js/9.3db69dd1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.abc9894d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端小白</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  百度
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://baidu.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  百度
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS样式</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>HTML</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>javascript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>CEMA</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>ES6</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/js/ES6/扩展运算符.html" class="sidebar-link">扩展运算符</a></li><li><a href="/js/ES6/数组方法.html" class="sidebar-link">原型与原型链</a></li><li><a href="/js/ES6/结构赋值.html" class="sidebar-link">结构赋值</a></li><li><a href="/js/ES6/Promise.html" aria-current="page" class="active sidebar-link">Promise</a></li></ul></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>NodeJs</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="异步api"><a href="#异步api" class="header-anchor">#</a> 异步API</h1> <ul><li><p>如果需要获取一个函数中异步操作的结果，则必须通过回调函数来获取</p></li> <li><p>回调函数：获取异步操作的结果</p></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token parameter">callback</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token comment">// calllback = function(data) {</span>
+		<span class="token comment">// console.log()</span>
+	<span class="token comment">// }</span>
+	<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">var</span> data<span class="token operator">=</span><span class="token string">'123'</span>
+		<span class="token function">callback</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token punctuation">)</span>
+
+<span class="token comment">// 想要打印 data</span>
+</code></pre></div><h1 id="promise"><a href="#promise" class="header-anchor">#</a> Promise</h1> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span>
+<span class="token comment">// 在EcmaScript 6中新增了一个API Promise</span>
+
+<span class="token comment">//Promise是一个构造容器</span>
+
+<span class="token comment">// 创建一个Promise</span>
+<span class="token comment">// 1、给别人一个承诺</span>
+	<span class="token comment">// promise 容器一旦创建，就会执行里面的函数</span>
+<span class="token keyword">var</span> p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span>reject</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'../data/a.txt'</span><span class="token punctuation">,</span><span class="token string">'utf8'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span>data</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token comment">// 失败了 承诺容器中的任务失败了</span>
+			<span class="token comment">// console.log(err)</span>
+			<span class="token comment">// 把容器的pending状态改为失败reject</span>
+			<span class="token comment">// 调用reject方法实际上就是then方法的第二个参数</span>
+			<span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+			<span class="token comment">// 承诺容器中的任务成功了</span>
+			<span class="token comment">// console.log(data)</span>
+			<span class="token comment">// 把容器的pending状态改为成功resolve</span>
+			<span class="token comment">// 也就是说这里调用的resolve方法实际上就是then方法传递的那个function</span>
+			<span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> p2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span>reject</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'../data/b.txt'</span><span class="token punctuation">,</span><span class="token string">'utf8'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span>data</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token comment">// 失败了 承诺容器中的任务失败了</span>
+			<span class="token comment">// console.log(err)</span>
+			<span class="token comment">// 把容器的pending状态改为失败reject</span>
+			<span class="token comment">// 调用reject方法实际上就是then方法的第二个参数</span>
+			<span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+			<span class="token comment">// 承诺容器中的任务成功了</span>
+			<span class="token comment">// console.log(data)</span>
+			<span class="token comment">// 把容器的pending状态改为成功resolve</span>
+			<span class="token comment">// 也就是说这里调用的resolve方法实际上就是then方法传递的那个function</span>
+			<span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">var</span> p3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span>reject</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	fs<span class="token punctuation">.</span><span class="token function">readFile</span><span class="token punctuation">(</span><span class="token string">'../data/c.txt'</span><span class="token punctuation">,</span><span class="token string">'utf8'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span>data</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token comment">// 失败了 承诺容器中的任务失败了</span>
+			<span class="token comment">// console.log(err)</span>
+			<span class="token comment">// 把容器的pending状态改为失败reject</span>
+			<span class="token comment">// 调用reject方法实际上就是then方法的第二个参数</span>
+			<span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+		<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+			<span class="token comment">// 承诺容器中的任务成功了</span>
+			<span class="token comment">// console.log(data)</span>
+			<span class="token comment">// 把容器的pending状态改为成功resolve</span>
+			<span class="token comment">// 也就是说这里调用的resolve方法实际上就是then方法传递的那个function</span>
+			<span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// p1就是那个承诺</span>
+
+<span class="token comment">// 当p1成功了 然后（then）做指定的操作</span>
+<span class="token comment">// then方法接收的function就是容器中的resolve函数</span>
+
+p1<span class="token punctuation">.</span>
+	<span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+		<span class="token comment">// p1读取成功的时候</span>
+		<span class="token comment">// 当前函数中return的结果就可以在后面的then中function接收到</span>
+		<span class="token comment">// 当你return 啥 后面接收的就是什么</span>
+		<span class="token comment">// 上面那些return的数据没什么卵用</span>
+		<span class="token comment">// 真正有用的是：我们可以return一个promise对象</span>
+		<span class="token comment">// 当return一个promise对象的时候，后续then中的方法的第一个参数会作为p2的resolve</span>
+		<span class="token keyword">return</span> p2
+	<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'读取文件失败了！！！'</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+	<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+		<span class="token keyword">return</span> p3
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+	<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/js/ES6/结构赋值.html" class="prev">
+        结构赋值
+      </a></span> <span class="next"><a href="/NodeJs/NodeJs基本知识.html">
+        NodeJs基本知识
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.800d2022.js" defer></script><script src="/assets/js/2.86f4cd79.js" defer></script><script src="/assets/js/23.58f91fbb.js" defer></script>
+  </body>
+</html>
